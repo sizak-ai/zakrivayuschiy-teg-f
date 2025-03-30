@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
+  font-family: var(--main-font, 'Inter-Variable', sans-serif);
   font-variation-settings: 'wght' var(--weight-main-font, 400);
   background-image: var(--bg-image);
   background-size: cover;
@@ -22,16 +22,16 @@
 
 .header {
   max-width: 700px;
-  min-height: 364px;
+  block-size: 368px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
-  font-family: var(--accent-font, 'PressStart2P-Regular'), serpentine;
+  font-family: var(--accent-font, 'PressStart2P', fantasy);
   border: var(--border-card, 2px solid #000);
   background-color: var(--bg-color, #fff);
-  margin-block-start: 102px;
+  margin-block-start: 100px;
 }
 
 .header__title {
@@ -48,31 +48,33 @@
 .main {
   display: grid;
   justify-items: center;
-  font-family: var(--main-font, Inter-Variable), sans-serif;
-  padding-block-start: 104px;
+  font-family: var(--main-font, 'Inter-Variable', sans-serif);
+  padding-block-start: 100px;
 }
 
 .section__card-list {
   display: grid;
   width: var(--width-card, clamp(371px, 80%, 696px));
-  background-color: var(--bg-color, #fff);
-  gap: 57px;
+  gap: 50px;
 }
 
 .article__card {
   border: var(--border-card, 2px solid #000);
   position: relative;
+  background-color: var(--bg-color, #fff);
+  max-width: 700px;
 }
 
 .title__card {
   font-variation-settings: 'wght' var(--weight-accent-font, 700);
   font-size: 18px;
+  padding: 4px 8px;
 }
 
 .decorated__text {
   position: absolute;
   mix-blend-mode: hard-light;
-  font-family: var(--accent-font,'PressStart2P-Regular'), serpentine;
+  font-family: var(--accent-font, 'PressStart2P', fantasy);
   font-size: 14px;
   text-shadow: 0 0 1px var(--bg-color, #fff);
   font-variation-settings: 'wght' var(--weight-accent-font, 700);
@@ -93,20 +95,19 @@
 
 .text__block {
   display: grid;
+  padding: 25px;
+  gap: 27px;
 }
 
 .text__card {
-  padding-block-start: 27px;
-}
-
-.text__card-opinion {
-  padding-block-start: 27px;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .button-footer {
   display: flex;
   justify-content: flex-end;
-  padding-block: 25px 25px;
+  padding-block-end: 25px;
   padding-inline-end: 25px;
 }
 
@@ -123,6 +124,7 @@
 
 .card_button:focus {
   outline: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .card_button:focus-visible {
@@ -154,7 +156,7 @@
   align-items: center;
   border: 2px solid transparent;
   color: var(--main-color, #000);
-  transition: border 0.3s ease;
+  transition: border 0.3s ease; 
   cursor: pointer;
   block-size: 36px;
   inline-size: 39px;
@@ -170,8 +172,8 @@
   border: 2px solid var(--main-color, #000);
 }
 
-.button__text {
-  font-family: var(--accent-font, 'PressStart2P-Regular'), serpentine;
+.button__text {   /* Общий стиль для кнопок Ок, Сохранить на память, Like */
+  font-family: var(--accent-font, 'PressStart2P', fantasy);
   font-size: 14px;
   position: relative;
   z-index: 1;
@@ -180,7 +182,7 @@
 }
 
 .card__save-button {
-  margin-block-start: 48px;
+  margin-block-start: 50px;
   min-width: 340px;
   min-height: 55px;
   border: 2px solid var(--font-color, #000);
@@ -231,7 +233,7 @@
   flex-shrink: 0;
   block-size: 39px;
   inline-size: 39px;
-  color: var(--button-color, #fff);
+  color: var(--bg-color, #fff);
   mix-blend-mode: difference;
 }
 
@@ -283,8 +285,7 @@
     (text-stroke: 1px var(--bg-color))
 ) {
   
-  g-color
-  .watermark {
+  .decorated__text {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--bg-color);
     text-stroke: 1px var(--bg-color);
