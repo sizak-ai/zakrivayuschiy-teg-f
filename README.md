@@ -1,1 +1,1 @@
-https://sizak-ai.github.io/zakrivayuschiy-teg-f/
+https://github.com/sizak-ai/zakrivayuschiy-teg-f

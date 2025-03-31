@@ -18,6 +18,7 @@
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
+  padding-block-start: 100px;
 }
 
 .header {
@@ -25,13 +26,12 @@
   block-size: 368px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: auto;
   font-family: var(--accent-font, 'PressStart2P', fantasy);
   border: var(--border-card, 2px solid #000);
   background-color: var(--bg-color, #fff);
-  margin-block-start: 100px;
 }
 
 .header__title {
@@ -54,15 +54,14 @@
 
 .section__card-list {
   display: grid;
-  width: var(--width-card, clamp(371px, 80%, 696px));
   gap: 50px;
 }
 
 .article__card {
-  border: var(--border-card, 2px solid #000);
+  max-width: 700px;
+  border: 2px solid var(--main-color, #000);
   position: relative;
   background-color: var(--bg-color, #fff);
-  max-width: 700px;
 }
 
 .title__card {
@@ -248,11 +247,11 @@
 
 @media (width <= 375px) {
 
-  .header_title {
-    margin-block-start: 120px;
+  .header {
+    block-size: 327px;
   }
 
-  .header_subtitle {
+  .header__subtitle {
     padding-block-start: 15px;
   }
 
@@ -261,6 +260,10 @@
     width: 306px;
     min-width: auto;
     min-height: 84px;
+  }
+
+  .text__block {
+    padding: 25px 27px;
   }
 
   .floppy {
@@ -276,6 +279,9 @@
   .decorated__text {
     right: 11px;
     top: 56px;
+  }
+  .decorated__text-start {
+    top: 77px;
   }
 
 }
