@@ -122,10 +122,6 @@
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button {
-
-}
-
 .card__button:focus {
   outline: none;
 }
@@ -268,13 +264,11 @@
   .decorated__text { 
     right: 11px; 
     top: 56px; 
-  } 
-  
+  }
+
   .decorated__text-start { 
-    top: 77px; 
+    top: 77px;
   } 
-
-
 }
 
 @supports (
