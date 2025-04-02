@@ -35,13 +35,13 @@
 
 .header__title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  margin-block-start: 120px;
+  margin-block-start: 130px;
 }
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 23px;
-  padding-block: 20px 120px;
+  padding-block: 20px 125px;
   text-transform: uppercase;
 }
 
@@ -54,7 +54,7 @@
 
 .section__card-list {
   display: grid;
-  gap: 50px;
+  gap: 52px;
 }
 
 .article__card {
@@ -67,7 +67,11 @@
 .title__card {
   font-variation-settings: 'wght' var(--weight-accent-font, 700);
   font-size: 18px;
-  padding: 4px 8px;
+  padding: 3px 10px;
+}
+
+.decorated__zone {
+  position: relative;
 }
 
 .decorated__text {
@@ -78,7 +82,7 @@
   text-shadow: 0 0 1px var(--bg-color, #fff);
   font-variation-settings: 'wght' var(--weight-accent-font, 700);
   right: 25px; 
-  top: 57px;
+  top: 30px;
   z-index: 1;
   text-transform: uppercase;
   opacity: 0.5;
@@ -94,8 +98,9 @@
 
 .text__block {
   display: grid;
-  padding: 25px;
-  gap: 27px;
+  padding-block: 27px 25px;
+  padding-inline: 25px;
+  gap: 30px;
 }
 
 .text__card {
